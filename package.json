@@ -3,9 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test"
+    "nx-app:start": "nx serve nx-app",
+    "nx-app:build": "nx build nx-app",
+    "nx-app:test": "nx test nx-app",
+    "frontend-admin:start": "nx serve frontend-admin",
+    "frontend-admin:build": "nx build frontend-admin",
+    "frontend-admin:test": "nx test frontend-admin"
   },
   "private": true,
   "dependencies": {
