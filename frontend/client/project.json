@@ -1,22 +1,25 @@
 {
-  "name": "nx-app",
-  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "name": "frontend-client",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "./src",
+  "sourceRoot": "frontend/client/src",
   "prefix": "nx-app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/nx-app",
-        "index": "./src/index.html",
-        "main": "./src/main.ts",
+        "outputPath": "dist/frontend/client",
+        "index": "frontend/client/src/index.html",
+        "main": "frontend/client/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "./tsconfig.app.json",
+        "tsConfig": "frontend/client/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["./src/favicon.ico", "./src/assets"],
-        "styles": ["./src/styles.scss"],
+        "assets": [
+          "frontend/client/src/favicon.ico",
+          "frontend/client/src/assets"
+        ],
+        "styles": ["frontend/client/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -50,11 +53,11 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "nx-app:build:production"
+          "browserTarget": "frontend-client:build:production"
         },
         "development": {
-          "browserTarget": "nx-app:build:development",
-          "port": 4202
+          "browserTarget": "frontend-client:build:development",
+          "port": 4201
         }
       },
       "defaultConfiguration": "development",
@@ -65,21 +68,24 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "nx-app:build"
+        "browserTarget": "frontend-client:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["./src/**/*.ts", "./src/**/*.html"]
+        "lintFilePatterns": [
+          "frontend/client/**/*.ts",
+          "frontend/client/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectName}"],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "jest.config.app.ts",
+        "jestConfig": "frontend/client/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -90,5 +96,5 @@
       }
     }
   },
-  "tags": ["scope:nx-app"]
+  "tags": ["frontend-client", "type:app"]
 }

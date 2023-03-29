@@ -19,3 +19,11 @@ Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and 
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
+
+
+
+## CMD Comands
+
+nx g @nrwl/angular:app frontend/client --style=scss     
+nx g @nrwl/nest:app backend/api --frontendProject=frontend-admin
+
