@@ -26,4 +26,8 @@ Visit the [Nx Documentation](https://nx.dev) to learn more.
 
 nx g @nrwl/angular:app frontend/client --style=scss     
 nx g @nrwl/nest:app backend/api --frontendProject=frontend-admin
+docker-compose up -d
+docker-compose stop
+
+
 
