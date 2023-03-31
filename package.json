@@ -8,7 +8,15 @@
     "nx-app:test": "nx test nx-app",
     "frontend-admin:start": "nx serve frontend-admin",
     "frontend-admin:build": "nx build frontend-admin",
-    "frontend-admin:test": "nx test frontend-admin"
+    "frontend-admin:test": "nx test frontend-admin",
+    "frontend-client:start": "nx serve frontend-client",
+    "frontend-client:build": "nx build frontend-client",
+    "frontend-client:test": "nx test frontend-client",
+    "frontent-api:start": "nx serve frontent-api",
+    "frontent-api:build": "nx build  frontent-api",
+    "frontent-api:test": "nx test  frontent-api",
+    "db:start": "copy .env docker-compose && cd docker-compose && docker-compose up -d",
+    "db:stop": " cd docker-compose && docker-compose stop && del .env"
   },
   "private": true,
   "dependencies": {

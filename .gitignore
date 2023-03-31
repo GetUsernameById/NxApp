@@ -5,6 +5,9 @@ dist
 tmp
 /out-tsc
 
+#secure zone
+.env
+
 # dependencies
 node_modules
 
