@@ -12,9 +12,9 @@
     "frontend-client:start": "nx serve frontend-client",
     "frontend-client:build": "nx build frontend-client",
     "frontend-client:test": "nx test frontend-client",
-    "frontent-api:start": "nx serve frontent-api",
-    "frontent-api:build": "nx build  frontent-api",
-    "frontent-api:test": "nx test  frontent-api",
+    "backend-api:start": "nx serve backend-api",
+    "backend-api:build": "nx build  backend-api",
+    "backend-api:test": "nx test  backend-api",
     "db:start": "copy .env docker-compose && cd docker-compose && docker-compose up -d",
     "db:stop": " cd docker-compose && docker-compose stop && del .env"
   },
@@ -31,12 +31,15 @@
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
+    "@nestjs/typeorm": "^9.0.1",
     "@nrwl/angular": "15.8.6",
     "@nrwl/nest": "^15.8.9",
     "axios": "^1.0.0",
+    "pg": "^8.10.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "typeorm": "^0.3.12",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
