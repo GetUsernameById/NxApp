@@ -19,7 +19,7 @@
               {
                 "sourceTag": "scope:frontend-admin",
                 "onlyDependOnLibsWithTags": ["scope:frontend-admin"]
-              },
+              }
             ]
           }
         ]
